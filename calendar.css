@@ -3,14 +3,32 @@ padding: 0;
 border-spacing: 0;
 }
 
-#calendar .ui-datepicker {
+
+.container {
+    margin: 20px auto;
     width: 400px;
     height: auto;
-    margin: 5px auto 0;
-    font: 16px 'Helvetica', sans-serif;
+    text-align: center;
+    padding: 4px;
+
+    background: #bebfc0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    vertical-align: baseline;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+}
+#calendar {
+    margin: 5px;
+}
+
+#calendar .ui-datepicker {
+    background: #f1f1f1;
+    width: auto;
+    height: auto;
+    font: 16px Verdana, Arial, Helvetica, sans-serif;
     color: #222;
-    border-radius: 8px;
-    border: solid 3px #cb8e28;
+    border-radius: 0 0 8px 8px;
 }
 
 .ui-datepicker a {
@@ -18,14 +36,15 @@ border-spacing: 0;
 }
 
 .ui-datepicker table {
+    background: #cb8e28;
+    border-radius: 0 0 8px 8px;
+    border: solid 3px #cb8e28;
     width: 94%;
-    margin: 0 auto 3%;
 }
 
 .ui-datepicker-title {
     text-align: center;
     background: #f1f1f1;
-    border-radius: 8px 8px 0 0;
     margin: 0;
     padding: 1.5% 0 1.5% 0;
 }
@@ -39,15 +58,7 @@ border-spacing: 0;
 }
 
 .ui-state-default, .ui-datepicker-calendar thead tr th{
-    border: solid 1px #e49252;
-}
-
-.ui-datepicker-calendar thead tr th{
-    border-bottom:  solid 2px #cb8e28;
-}
-
-.ui-datepicker tbody {
-    background: #f1e5e5;
+    border: solid 1px #cb8e28;
 }
 
 .ui-datepicker td span, .ui-datepicker td a {
@@ -71,6 +82,12 @@ border-spacing: 0;
     position: relative;
 }
 
-.ui-datepicker-other-month {
+.ui-state-default {
+    background: #f1e5e5;
+    border-radius: 0 0 7px 0;
+}
+
+.ui-datepicker-other-month .ui-state-default{
     background: #c8aeae;
+    border-radius: 7px 0 0 0;
 }
