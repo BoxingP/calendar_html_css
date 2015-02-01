@@ -1,21 +1,25 @@
 body {
     background: white;
-    font-family: 'Helvetica', sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #222;
 }
 
-div {
-    background: #ffffff;
-    border-radius: 8px;
-    border: solid 3px #cb8e28;
+.container {
     width: 400px;
     height: 400px;
+    background: #ffffff;
+    margin: 10px auto;
+}
+
+#calendar {
+    border-radius: 8px;
+    border: solid 3px #cb8e28;
 }
 
 h2 {
     background: #f1f1f1;
-    border-radius: 8px 8px 0 0;
+    border-radius: 7px 7px 0 0;
     font-size: 1em;
     margin: 0;
     text-align: center;
@@ -24,7 +28,6 @@ h2 {
 
 table {
     border-collapse: collapse;
-    /*color: #222;*/
     width: 94%;
     margin: 0 3% 3% 3%;
 }
@@ -32,7 +35,6 @@ table {
 td {
     background: #f1e5e5;
     border: solid 2px #e49252;
-    /*color: #444;*/
     line-height: 47px;
     text-align: center;
 }
@@ -44,4 +46,5 @@ tr:first-child td {
 
 tr .exclude {
     background: #c8aeae;
+    color: #a59a9b;
 }
