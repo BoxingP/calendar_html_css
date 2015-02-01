@@ -1,4 +1,4 @@
-$(".ui-datepicker").live("mousewheel", function (event, delta) {
+$(".ui-datepicker").live("mousewheel DOMMouseScroll MozMousePixelScroll", function (event, delta) {
     if (delta < 0) {
         $(this).find('.ui-datepicker-next').click();
     } else {
