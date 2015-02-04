@@ -1,8 +1,8 @@
-(function($) {
+(function ($) {
 
     var Calendar = {
 
-        initialize: function initialize () {
+        initialize: function initialize() {
 
             var that = this;
 
@@ -29,7 +29,7 @@
                 ev.preventDefault();
 
                 var nextMonth = ( that.month === 0 ) ? 11 : that.month - 1
-                    ,nextYear = ( that.month === 0 ) ? that.year - 1 : that.year;
+                    , nextYear = ( that.month === 0 ) ? that.year - 1 : that.year;
 
                 that.updateCalendar(nextMonth, nextYear);
             });
@@ -41,11 +41,11 @@
 
         },
 
-        updateHeader: function updateHeader () {
+        updateHeader: function updateHeader() {
             $('h2').html(this.year + ' ' + this.monthArray[this.month]);
         },
 
-        getFirstDay: function getFirstDay () {
+        getFirstDay: function getFirstDay() {
 
             var tempDate = new Date();
 
@@ -56,7 +56,7 @@
             return tempDate.getDay();
         },
 
-        daysInMonth: function daysInMonth (month, year) {
+        daysInMonth: function daysInMonth(month, year) {
             return 32 - new Date(year, month, 32).getDate();
         },
 
@@ -70,7 +70,7 @@
                 startingDate = ( firstDay === 0 ) ? lastMonthLength - 6 : lastMonthLength - ( firstDay - 1 ),
                 cellSize = $('.dateCell').size();
 
-            for ( var i = startingDate; i <= lastMonthLength; i++ ) {
+            for (var i = startingDate; i <= lastMonthLength; i++) {
                 dateArray.push({
                     date: i,
                     className: 'prevDate'
@@ -78,7 +78,7 @@
                 startingDate++;
             }
 
-            for ( var m = 1; m <= thisMonthLength; m++ ) {
+            for (var m = 1; m <= thisMonthLength; m++) {
                 dateArray.push({
                     date: m,
                     className: 'currentDate'
@@ -99,30 +99,30 @@
             });
         },
 
-        createCalendar: function createCalendar (month, year) {
+        createCalendar: function createCalendar(month, year) {
 
             var that = this,
                 calendarRows = [];
 
             $('.dateRow').remove();
 
-            for ( var i = 0; i < 6; i++) {
+            for (var i = 0; i < 6; i++) {
 
-                var row = $('<tr/>', { 'class': 'dateRow' }).appendTo(that.calendar);
+                var row = $('<tr/>', {'class': 'dateRow'}).appendTo(that.calendar);
 
                 calendarRows.push(row);
             }
 
             $.each(calendarRows, function (index, value) {
-                for ( var n = 0; n < 7; n++ ) {
-                    $('<td/>', { 'class': 'dateCell' }).appendTo(value);
+                for (var n = 0; n < 7; n++) {
+                    $('<td/>', {'class': 'dateCell'}).appendTo(value);
                 }
             });
 
             this.createDateArray(month, year);
         },
 
-        updateCalendar: function updateCalendar (month, year) {
+        updateCalendar: function updateCalendar(month, year) {
             this.calendarDate.setMonth(month);
             this.calendarDate.setFullYear(year);
 
