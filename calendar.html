@@ -4,12 +4,33 @@
 <head>
     <meta charset="utf-8">
     <title>Calendar use HTML/CSS/JavaScript</title>
+    <link rel="stylesheet" href="resources/icomoon/style.css">
     <link rel="stylesheet" href="calendar.css"/>
 </head>
 
 <body>
 
 <section class="container">
+    <h2 class="calendarTitle"></h2>
+    <a class="calendarNav prev" href="#"><i class="icon-arrow-left5"></i></a>
+    <a class="calendarNav next" href="#"><i class="icon-arrow-right5"></i></a>
+
+    <table class="calendar">
+        <thead>
+        <tr class="dayLabels">
+            <th>星期天</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+            <th>星期六</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
 </section>
 
 <script src="js/jquery-1.5.2.js"></script>

@@ -5,3 +5,12 @@ body {
     color: #222;
     align-items: center;
 }
+
+.container {
+    width: 400px;
+    margin: 0 auto 0;
+}
+
+a {
+    text-decoration: none;
+}
