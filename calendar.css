@@ -14,3 +14,7 @@ body {
 a {
     text-decoration: none;
 }
+
+a.prev, a.next {
+    display: none;
+}

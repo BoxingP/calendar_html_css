@@ -137,4 +137,14 @@
 
     Calendar.initialize();
 
+    $(".container").live("mousewheel DOMMouseScroll MozMousePixelScroll", function (event, delta) {
+        if (delta < 0) {
+            $(this).find('.next').click();
+        } else {
+            $(this).find('.prev').click();
+        }
+        event.preventDefault();
+        event.stopPropagation();
+    });
+    
 }(jQuery));
