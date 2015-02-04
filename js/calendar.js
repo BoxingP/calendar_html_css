@@ -131,6 +131,11 @@
 
             this.updateHeader();
             this.createCalendar(this.month, this.year);
+
+            $('.dateCell').bind('click', function () {
+                $('.dateCell').removeClass('selected');
+                $(this).addClass('selected');
+            });
         }
 
     };

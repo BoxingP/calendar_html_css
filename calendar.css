@@ -11,10 +11,53 @@ body {
     margin: 0 auto 0;
 }
 
+h2.calendarTitle {
+    font-size: 1em;
+    text-align: center;
+    background: #f1f1f1;
+    width: 94%;
+    margin: 0 auto 0;
+    padding: 1.5% 0 1.5% 0;
+    border-radius: 8px 8px 0 0;
+}
+
 a {
     text-decoration: none;
 }
 
 a.prev, a.next {
     display: none;
+}
+
+table {
+    background: #cb8e28;
+    width: 94%;
+    margin: 0 auto 0;
+}
+
+.dayLabels {
+    line-height: 31px;
+    color: #f1f1f1;
+}
+
+.dateCell {
+    line-height: 49px;
+    text-align: center;
+    background: #f1e5e5;
+    border-radius: 0 0 7px 0;
+}
+
+.dateCell:hover {
+    opacity: 0.6;
+}
+
+.prevDate, .nextDate {
+    background: #c8aeae;
+    color: #a59a9b;
+    border-radius: 7px 0 0 0;
+}
+
+.selected {
+    background: #e49252;
+    color: #ffffff;
 }
